@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
   resources :students, only: :index
-  get '/students/:id', to: 'students#show', as: 'student'
+
+  #new action
+  get "/students/new", to: "students#new"
+
+  #create action
+  post "/students", to: "students#create", as: :new_student
+
+  get '/students/:id', to: 'students#show', as: :student
+
+
 end
