@@ -1,0 +1,14 @@
+Student Form
+
+<%= form_tag students_new_path do %>
+
+<%= text_field_tag :"first_name" %><br><br>
+<%= text_area_tag :"last_name" %>
+
+<br><br>
+
+<%= submit_tag "Submit Student" %>
+
+<% end %>
+
+<%= params.inspect %>
